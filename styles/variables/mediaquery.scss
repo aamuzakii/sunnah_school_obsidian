@@ -1,0 +1,61 @@
+$xs: 0;
+$sm: 600;
+$md: 960;
+$lg: 1280;
+$xl: 1920;
+
+$downsm: max-width $sm;
+
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin mediaQuery($point, $width) {
+  @if $point == only {
+    @if $width == xs {
+      @media (max-width: $sm + px) {
+        @content;
+      }
+    } @else if $width == sm {
+      @media (min-width: ($sm+1) + px) and (max-width: $md + px) {
+        @content;
+      }
+    } @else if $width == md {
+      @media (min-width: ($md+1) + px) and (max-width: $lg + px) {
+        @content;
+      }
+    } @else if $width == lg {
+      @media (min-width: ($lg+1) + px) and (max-width: $xl + px) {
+        @content;
+      }
+    } @else if $width == xl {
+      @media (min-width: ($xl+1) + px) {
+        @content;
+      }
+    }
+  } @else if $point == between {
+    $number1: str-slice($string, 0, 2);
+    $number2: str-slice($string, 4, 2);
+    @media (min-width: $number1 + px) and (max-width: $number2 + px) {
+      @content;
+    }
+  } @else if $point == down {
+    @if $width == xs {
+      @media (max-width: $sm + px) {
+        @content;
+      }
+    } @else if $width == sm {
+      @media (max-width: $md + px) {
+        @content;
+      }
+    } @else if $width == md {
+      @media (max-width: $lg + px) {
+        @content;
+      }
+    } @else if $width == lg {
+      @media (max-width: $xl + px) {
+        @content;
+      }
+    }
+  }
+}

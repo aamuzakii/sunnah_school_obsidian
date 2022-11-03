@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://use.typekit.net/xxl1wsy.css');
+
+$notoSans: 'Noto Sans', sans-serif !important;
+$muli: 'muli', sans-serif !important;
+
+/* px to rem
+10px -> 0.625rem
+12px -> 0.75rem 
+14px -> 0.875rem 
+16px -> 1rem 
+18px -> 1.125rem 
+20px -> 1.25rem 
+24px -> 1.5rem 
+28px -> 1.75rem 
+40px -> 2.5rem 
+48px -> 3rem 
+72px -> 5rem
+*/
+
+$px10: 0.625rem;
+$px12: 0.75rem;
+$px14: 0.875rem;
+$px16: 1rem;
+$px18: 1.125rem;
+$px20: 1.25rem;
+$px24: 1.5rem;
+$px28: 1.75rem;
+$px40: 2.5rem;
+$px48: 3rem;
+$px72: 5rem;
+
+$root: 16px;
+
+$heading1: 72px;
+$heading2: $px48;
+$heading3: $px40;
+
+$subtitle1: $px18;
+$subtitle3: $px16;
+
+$body1: $px16;
+$body2: $px14;
+$body3: $px12;
+$body4: $px10;
+
+$labelLarge: $px20;
+$labelMedium: $px14;
+$labelSmall: $px12;
+$labelXsmall: $px10;
+
+.heading1 {
+  font-size: $heading1;
+  font-weight: bold;
+  line-height: 98px;
+}
+
+.heading2 {
+  font-size: $heading2;
+  font-weight: bold;
+  line-height: 64px;
+}
+
+.heading3 {
+  font-size: $heading3;
+  font-weight: bold;
+  line-height: 64px;
+}
+
+.subtitle1 {
+  font-size: $subtitle1;
+  font-weight: bold;
+  line-height: $px28;
+}
+
+.subtitle2 {
+  font-size: $subtitle1;
+  font-weight: 600;
+  line-height: $px28;
+}
+
+.subtitle3 {
+  font-size: $subtitle3;
+  font-weight: 600;
+  line-height: $px20;
+}
+
+.body1 {
+  font-size: $body1;
+  line-height: 26px;
+}
+
+.body2 {
+  font-size: $body2;
+  line-height: 22px;
+}
+
+.body3 {
+  font-size: $body3;
+  line-height: $px20;
+}
+
+.body4 {
+  font-size: $body4;
+  line-height: $px16;
+}
+
+.labelLarge {
+  font-size: $labelLarge;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.labelMedium {
+  font-size: $labelMedium;
+  font-weight: 600;
+  line-height: $px20;
+}
+
+.labelSmall {
+  font-size: $labelSmall;
+  font-weight: 600;
+  line-height: $px16;
+}
+
+.labelXSmall {
+  font-size: $labelXsmall;
+  font-weight: 600;
+  line-height: $px14;
+}
+
+.fontBold {
+  font-weight: 700;
+}
+
+.fontCenter {
+  align-self: center;
+  text-align: center;
+}

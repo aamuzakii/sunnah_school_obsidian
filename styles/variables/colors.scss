@@ -1,0 +1,99 @@
+$orange1: #da570c;
+$orange2: #f37125;
+$orange3: #faa51a;
+$orange4: #f69056;
+$orange5: #f6c9b5;
+
+$grey1: #2f2f2f;
+$grey2: #545454;
+$grey3: #828282;
+$grey4: #bdbdbd;
+$grey5: #e0e0e0;
+$grey6: #f2f2f2;
+
+$white: #ffffff;
+
+$blue1: #005181;
+$blue2: #006aaf;
+$blue3: #008ce6;
+$blue4: #80cdff;
+$blue5: #b3e1ff;
+
+$green1: #006555;
+$green2: #008b7f;
+$green3: #00a69a;
+$green4: #8dd1c3;
+
+$maingreen: #52c41a;
+$mainred: #dd3c3c;
+$mainyellow: #faad14;
+
+/*********************
+VARIABLE FOR GENERATED
+*********************/
+$colors: (
+  Orange1: #da570c,
+  Orange2: #f37125,
+  Orange3: #faa51a,
+  Orange4: #f69056,
+  Orange5: #f6c9b5,
+  Grey1: #2f2f2f,
+  Grey2: #545454,
+  Grey3: #828282,
+  Grey4: #bdbdbd,
+  Grey5: #e0e0e0,
+  Grey6: #f2f2f2,
+  White: #ffffff,
+  Blue1: #005181,
+  Blue2: #006aaf,
+  Bblue3: #008ce6,
+  Blue4: #80cdff,
+  Blue5: #b3e1ff,
+  Green1: #006555,
+  Green2: #008b7f,
+  Green3: #00a69a,
+  Green4: #8dd1c3,
+  Maingreen: #52c41a,
+  Mainred: #dd3c3c,
+  Mainyellow: #faad14,
+);
+
+/*********************
+GENERATE FONT COLOR
+
+example in component:
+'styles.textGreen4'
+*********************/
+
+@mixin color-modifiers {
+  @each $name, $hex in $colors {
+    // do stuff
+    &#{$name} {
+      color: $hex !important;
+    }
+  }
+}
+
+.text {
+  @include color-modifiers;
+}
+
+/*********************
+GENERATE BACKGROUND COLOR
+
+example in component:
+'styles.backgroundGrey2'
+*********************/
+
+@mixin color-modifiers {
+  @each $name, $hex in $colors {
+    // do stuff
+    &#{$name} {
+      background-color: $hex !important;
+    }
+  }
+}
+
+.background {
+  @include color-modifiers;
+}
